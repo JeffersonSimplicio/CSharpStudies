@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-VariablesDouble", "3-Vari
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-ConversionsAndOtherTypes", "4-ConversionsAndOtherTypes\4-ConversionsAndOtherTypes.csproj", "{4B097BF6-CCF0-4E6C-A7FA-6A13D5DD4913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-VariablesChar", "5-VariablesChar\5-VariablesChar.csproj", "{D93A092F-1A54-47B8-97D8-CFC9C93AF183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-VariablesCharString", "5-VariablesChar\5-VariablesCharString.csproj", "{D93A092F-1A54-47B8-97D8-CFC9C93AF183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
