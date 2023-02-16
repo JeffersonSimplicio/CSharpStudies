@@ -35,15 +35,15 @@
         {
             case 1:
                 Console.WriteLine("Caso 1");
-            break;
+                break;
             case 2:
                 Console.WriteLine("Caso 2");
-            break;
+                break;
             case 3:
                 Console.WriteLine("Caso 3");
-            break;
+                break;
             default:
-                Console.WriteLine("Nem dos casos satifez.");
+                Console.WriteLine("Nem dos casos satisfez.");
                 break;
         }
 
