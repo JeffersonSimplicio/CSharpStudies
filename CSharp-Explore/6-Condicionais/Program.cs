@@ -2,6 +2,8 @@
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("if e else(ternario)");
+
         int idade = 17;
         int qntPessoas = 2;
 
@@ -11,7 +13,7 @@
         }
         else
         {
-            if (qntPessoas > 0)
+            if (qntPessoas > 1)
             {
                 Console.WriteLine("Esta acompanhado pode entrar.");
             }
@@ -22,8 +24,28 @@
         };
 
         //Operador ternario
-        string response = (idade >= 18) ? "Pode entrar."  : "Não pode entar.";
+        string response = (idade >= 18) ? "Pode entrar." : "Não pode entar.";
         Console.WriteLine(response);
+
+        Console.WriteLine("Switch case");
+
+        int opc = 6;
+
+        switch (opc)
+        {
+            case 1:
+                Console.WriteLine("Caso 1");
+            break;
+            case 2:
+                Console.WriteLine("Caso 2");
+            break;
+            case 3:
+                Console.WriteLine("Caso 3");
+            break;
+            default:
+                Console.WriteLine("Nem dos casos satifez.");
+                break;
+        }
 
         //Descomente o trecho a baixo caso execute o arquivo "buildado"
         //Console.WriteLine("Precione Enter para finalizar...");
