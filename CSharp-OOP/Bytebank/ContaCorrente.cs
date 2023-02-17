@@ -33,16 +33,28 @@ namespace Bytebank
             this.saldo = saldo;
         }
 
-        public void Deposito(double valor)
+        public void Depositar(double valor)
         {
             this.saldo += valor;
         }
 
-        public bool Saque(double valor)
+        public bool Sacar(double valor)
         {
             if (valor <= this.saldo)
             {
                 this.saldo -= valor;
+                return true;
+            }
+            return false;
+        }
+
+        public bool Transferir(double valor, ContaCorrente usuario)
+        {
+            //bool check = usuario.Sacar(valor);
+            bool check = this.Sacar(valor);
+            if (check)
+            {
+                usuario.Depositar(valor);
                 return true;
             }
             return false;
