@@ -24,26 +24,25 @@ namespace Bytebank.Contas
         public Titular titular;
         public string conta;
         public int agencia;
-        public double saldo;
+        private double saldo;
 
-        public ContaCorrente(Titular titular, string conta, int agencia, double saldo)
+        public ContaCorrente(Titular titular, string conta, int agencia)
         {
             this.titular = titular;
             this.conta = conta;
             this.agencia = agencia;
-            this.saldo = saldo;
         }
 
         public void Depositar(double valor)
         {
-            saldo += valor;
+            this.saldo += valor;
         }
 
         public bool Sacar(double valor)
         {
             if (valor <= saldo)
             {
-                saldo -= valor;
+                this.saldo -= valor;
                 return true;
             }
             return false;
@@ -68,7 +67,7 @@ Conta: {1}
 Agência: {2}
 Saldo: {3}
 ";
-            Console.WriteLine(string.Format(log, titular.nome, conta, agencia, saldo));
+            Console.WriteLine(string.Format(log, titular.nome, this.conta, this.agencia, this.saldo));
         }
     }
 }

@@ -9,9 +9,9 @@ Titular clinteJefferson = new Titular(
 ContaCorrente contaJefferson = new ContaCorrente(
     clinteJefferson,
     "1010-1",
-    1,
-    200
+    1
 );
+contaJefferson.ExibirDadosDaConta();
 
 Titular clinteAna = new Titular(
     "Ana Leticia",
@@ -21,8 +21,7 @@ Titular clinteAna = new Titular(
 ContaCorrente contaAna = new ContaCorrente(
     clinteAna,
     "1011-1",
-    1,
-    250
+    1
 );
 
 //Console.WriteLine("Titular: " + contaJefferson.titular);
