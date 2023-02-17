@@ -22,18 +22,20 @@ namespace Bytebank.Contas
 {
     public class ContaCorrente
     {
-        public Titular ClienteTitular { get; set; }
+        public Titular ClienteTitular { get; private set; }
         public string Conta { get; set; }
         //Propriedade alto implementada
         //Util quando não é nesseçario realizar validação
         public int Agencia { get; set; }
         private double saldo;
+        public static int qntContasCriadas { get; set; }
 
         public ContaCorrente(Titular titular, string conta, int agencia)
         {
             this.ClienteTitular = titular;
             this.Conta = conta;
             this.Agencia = agencia;
+            qntContasCriadas++;
         }
 
         public double Saldo

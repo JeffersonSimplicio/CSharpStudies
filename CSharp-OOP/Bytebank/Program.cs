@@ -24,6 +24,7 @@ ContaCorrente contaAna = new ContaCorrente(
     "1011-1",
     1
 );
+Console.WriteLine(ContaCorrente.qntContasCriadas);
 
 //Console.WriteLine("Titular: " + contaJefferson.titular);
 //Console.WriteLine();
