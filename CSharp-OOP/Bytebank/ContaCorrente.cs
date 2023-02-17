@@ -20,12 +20,12 @@ namespace Bytebank
 {
     public class ContaCorrente
     {
-        public string titular;
+        public Cliente titular;
         public string conta;
         public int agencia;
         public double saldo;
 
-        public ContaCorrente(string titular, string conta, int agencia, double saldo)
+        public ContaCorrente(Cliente titular, string conta, int agencia, double saldo)
         {
             this.titular = titular;
             this.conta = conta;
@@ -62,13 +62,12 @@ namespace Bytebank
 
         public void ExibirDadosDaConta()
         {
-            string log = @"
-Titular: {0}
+            string log = @"Titular: {0}
 Conta: {1}
 Agência: {2}
 Saldo: {3}
 ";
-            Console.WriteLine(string.Format(log, this.titular, this.conta, this.agencia, this.saldo));
+            Console.WriteLine(string.Format(log, this.titular.nome, this.conta, this.agencia, this.saldo));
         }
     }
 }

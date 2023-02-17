@@ -1,6 +1,12 @@
 ﻿using Bytebank;
-ContaCorrente contaJefferson =  new ContaCorrente(
+
+Cliente clinteJefferson = new Cliente(
     "Jefferson Simplicio",
+    "123.456.789-10",
+    "Web Developer"
+);
+ContaCorrente contaJefferson =  new ContaCorrente(
+    clinteJefferson,
     "1010-1",
     1,
     200
@@ -22,8 +28,14 @@ string response = check ? "Saque bem sucedido" : "Não possui saldo suficiente";
 Console.WriteLine(response);
 Console.WriteLine("saldo pos-saque: " + contaJefferson.saldo);
 Console.WriteLine();
-ContaCorrente contaAna = new ContaCorrente(
+
+Cliente clinteAna = new Cliente(
     "Ana Leticia",
+    "887.654.321-01",
+    "Web Developer"
+);
+ContaCorrente contaAna = new ContaCorrente(
+    clinteAna,
     "1011-1",
     1,
     250
