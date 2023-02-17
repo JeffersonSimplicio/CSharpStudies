@@ -11,6 +11,7 @@ ContaCorrente contaJefferson = new ContaCorrente(
     "1010-1",
     1
 );
+contaJefferson.Saldo = -8;
 contaJefferson.ExibirDadosDaConta();
 
 Titular clinteAna = new Titular(

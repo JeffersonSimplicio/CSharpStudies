@@ -8,15 +8,15 @@ namespace Bytebank.Clientes
 {
     public class Titular
     {
-        public string nome;
-        public string cpf;
-        public string profissao;
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Profissao { get; set; }
 
         public Titular(string nome, string cpf, string profissao)
         {
-            this.nome = nome;
-            this.cpf = cpf;
-            this.profissao = profissao;
+            this.Nome = nome;
+            this.Cpf = cpf;
+            this.Profissao = profissao;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Bytebank.Clientes;
 
 //namespace Bytebank
@@ -21,16 +22,33 @@ namespace Bytebank.Contas
 {
     public class ContaCorrente
     {
-        public Titular titular;
-        public string conta;
-        public int agencia;
+        public Titular ClienteTitular { get; set; }
+        public string Conta { get; set; }
+        //Propriedade alto implementada
+        //Util quando não é nesseçario realizar validação
+        public int Agencia { get; set; }
         private double saldo;
 
         public ContaCorrente(Titular titular, string conta, int agencia)
         {
-            this.titular = titular;
-            this.conta = conta;
-            this.agencia = agencia;
+            this.ClienteTitular = titular;
+            this.Conta = conta;
+            this.Agencia = agencia;
+        }
+
+        public double Saldo
+        {
+            get
+            {
+                return this.saldo;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this.saldo += value;
+                }
+            }
         }
 
         public void Depositar(double valor)
@@ -67,7 +85,7 @@ Conta: {1}
 Agência: {2}
 Saldo: {3}
 ";
-            Console.WriteLine(string.Format(log, titular.nome, this.conta, this.agencia, this.saldo));
+            Console.WriteLine(string.Format(log, ClienteTitular.Nome, this.Conta, this.Agencia, this.saldo));
         }
     }
 }
