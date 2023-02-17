@@ -10,7 +10,14 @@ ContaCorrente contaJefferson =  new ContaCorrente(
 //contaJefferson.agencia = 1;
 //contaJefferson.saldo = 200;
 
-Console.WriteLine(contaJefferson.titular);
-Console.WriteLine(contaJefferson.saldo);
+Console.WriteLine("Titular: " + contaJefferson.titular);
+Console.WriteLine();
+Console.WriteLine("saldo pre-deposito: " + contaJefferson.saldo);
 contaJefferson.Deposito(100);
-Console.WriteLine(contaJefferson.saldo);
+Console.WriteLine("saldo pos-deposito: " + contaJefferson.saldo);
+Console.WriteLine();
+Console.WriteLine("saldo pre-saque: " + contaJefferson.saldo);
+bool check = contaJefferson.Saque(200);
+string response = check ? "Saque bem sucedido" : "Não possui saldo suficiente";
+Console.WriteLine(response);
+Console.WriteLine("saldo pos-saque: " + contaJefferson.saldo);
