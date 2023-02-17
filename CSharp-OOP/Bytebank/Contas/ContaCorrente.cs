@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bytebank.Clientes;
 
 //namespace Bytebank
 //{
@@ -16,16 +17,16 @@ using System.Threading.Tasks;
 //}
 
 //Usando "constructor"
-namespace Bytebank
+namespace Bytebank.Contas
 {
     public class ContaCorrente
     {
-        public Cliente titular;
+        public Titular titular;
         public string conta;
         public int agencia;
         public double saldo;
 
-        public ContaCorrente(Cliente titular, string conta, int agencia, double saldo)
+        public ContaCorrente(Titular titular, string conta, int agencia, double saldo)
         {
             this.titular = titular;
             this.conta = conta;
@@ -35,14 +36,14 @@ namespace Bytebank
 
         public void Depositar(double valor)
         {
-            this.saldo += valor;
+            saldo += valor;
         }
 
         public bool Sacar(double valor)
         {
-            if (valor <= this.saldo)
+            if (valor <= saldo)
             {
-                this.saldo -= valor;
+                saldo -= valor;
                 return true;
             }
             return false;
@@ -51,7 +52,7 @@ namespace Bytebank
         public bool Transferir(double valor, ContaCorrente usuario)
         {
             //bool check = usuario.Sacar(valor);
-            bool check = this.Sacar(valor);
+            bool check = Sacar(valor);
             if (check)
             {
                 usuario.Depositar(valor);
@@ -67,7 +68,7 @@ Conta: {1}
 Agência: {2}
 Saldo: {3}
 ";
-            Console.WriteLine(string.Format(log, this.titular.nome, this.conta, this.agencia, this.saldo));
+            Console.WriteLine(string.Format(log, titular.nome, conta, agencia, saldo));
         }
     }
 }

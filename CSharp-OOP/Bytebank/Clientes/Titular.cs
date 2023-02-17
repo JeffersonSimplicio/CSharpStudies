@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bytebank
+namespace Bytebank.Clientes
 {
-    public class Cliente
+    public class Titular
     {
         public string nome;
         public string cpf;
         public string profissao;
 
-        public Cliente(string nome, string cpf, string profissao)
+        public Titular(string nome, string cpf, string profissao)
         {
             this.nome = nome;
             this.cpf = cpf;

@@ -1,6 +1,7 @@
-﻿using Bytebank;
+﻿using Bytebank.Clientes;
+using Bytebank.Contas;
 
-Cliente clinteJefferson = new Cliente(
+Titular clinteJefferson = new Titular(
     "Jefferson Simplicio",
     "123.456.789-10",
     "Web Developer"
@@ -29,7 +30,7 @@ Console.WriteLine(response);
 Console.WriteLine("saldo pos-saque: " + contaJefferson.saldo);
 Console.WriteLine();
 
-Cliente clinteAna = new Cliente(
+Titular clinteAna = new Titular(
     "Ana Leticia",
     "887.654.321-01",
     "Web Developer"
