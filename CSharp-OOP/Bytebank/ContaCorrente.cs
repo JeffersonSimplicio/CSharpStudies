@@ -59,5 +59,16 @@ namespace Bytebank
             }
             return false;
         }
+
+        public void ExibirDadosDaConta()
+        {
+            string log = @"
+Titular: {0}
+Conta: {1}
+Agência: {2}
+Saldo: {3}
+";
+            Console.WriteLine(string.Format(log, this.titular, this.conta, this.agencia, this.saldo));
+        }
     }
 }
