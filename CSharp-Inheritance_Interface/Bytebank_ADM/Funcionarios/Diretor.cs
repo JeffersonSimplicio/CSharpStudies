@@ -13,7 +13,7 @@ namespace Bytebank_ADM.Funcionarios
         }
         //Equivalente ao super
 
-        public double Bonificacao()
+        public override double Bonificacao()
         {
             //return String.Format("{0:N}", this.Salario * 0.5);
             return this.Salario * 0.5;
