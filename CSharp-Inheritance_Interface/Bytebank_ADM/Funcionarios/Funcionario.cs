@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Funcionaio
+    public class Funcionario
     {
         public string Nome { get; set; }
         public string CPF { get; set; }
         public double Salario { get; set; }
 
-        public Funcionaio(string nome, string cpf, double salario)
+        public Funcionario(string nome, string cpf, double salario)
         {
             this.Nome = nome;
             this.CPF = cpf;
