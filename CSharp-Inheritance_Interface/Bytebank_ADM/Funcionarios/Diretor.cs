@@ -19,9 +19,10 @@ namespace Bytebank_ADM.Funcionarios
             this.Salario = salario;
         }
 
-        public string Bonificacao()
+        public double Bonificacao()
         {
-            return String.Format("{0:N}", this.Salario * 0.5);
+            //return String.Format("{0:N}", this.Salario * 0.5);
+            return this.Salario * 0.5;
         }
     }
 }
