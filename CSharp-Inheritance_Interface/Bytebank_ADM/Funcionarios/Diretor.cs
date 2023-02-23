@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Diretor
+    public class Diretor : Funcionario
     {
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public double Salario { get; set; }
-
-        public Diretor(string nome, string cpf, double salario)
+        public Diretor(string nome, string cpf, double salario) : base(nome, cpf, salario)
         {
-            this.Nome = nome;
-            this.CPF = cpf;
-            this.Salario = salario;
         }
+        //Equivalente ao super
 
         public double Bonificacao()
         {

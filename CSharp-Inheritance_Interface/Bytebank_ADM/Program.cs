@@ -12,4 +12,4 @@ Console.WriteLine(roberta.Bonificacao());
 GerenciadorBonificacao bonificacao = new GerenciadorBonificacao();
 bonificacao.Registrar(roberta);
 bonificacao.Registrar(pedro);
-Console.WriteLine(bonificacao.TotalBonificacao);
+Console.WriteLine("Total de em bonificação: R$" + bonificacao.TotalBonificacao);
