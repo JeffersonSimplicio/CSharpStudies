@@ -27,3 +27,12 @@ Log.Funcionario(fernanda);
 
 Auxiliar pedro = new Auxiliar("Pedro Martinels", "0004");
 Log.Funcionario(pedro);
+
+Console.WriteLine("Total de funcionaios: " + Funcionario.quantidadeFuncionarios);
+
+Bonificacao bonificacao = new Bonificacao();
+bonificacao.Registrar(roberta);
+bonificacao.Registrar(paulo);
+bonificacao.Registrar(fernanda);
+bonificacao.Registrar(pedro);
+Console.WriteLine(string.Format("Total de bonificação: R${0:N}", bonificacao.TotalBonificacao));
