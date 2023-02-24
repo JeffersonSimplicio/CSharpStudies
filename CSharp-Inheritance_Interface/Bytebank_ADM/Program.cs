@@ -8,14 +8,7 @@ Console.WriteLine(
     )
 );
 
-pedro.aumentoSalario();
-Console.WriteLine(
-    string.Format(
-        "{0}: salário de R${1:N}; bonificação de R${2:N}", pedro.Nome, pedro.Salario, pedro.Bonificacao()
-    )
-);
-
-Diretor roberta = new Diretor("Roberta", "98765432101", 4321.09);
+Diretor roberta = new Diretor("Roberta", "98765432101");
 Console.WriteLine(
     string.Format(
         "{0}: salário de R${1:N}; bonificação de R${2:N}", roberta.Nome, roberta.Salario, roberta.Bonificacao()

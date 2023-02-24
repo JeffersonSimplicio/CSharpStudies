@@ -8,7 +8,8 @@ namespace Bytebank_ADM.Funcionarios
 {
     public class Diretor : Funcionario
     {
-        public Diretor(string nome, string cpf, double salario) : base(nome, cpf, salario)
+        static double salarioPadrão = 5000;
+        public Diretor(string nome, string cpf) : base(nome, cpf, salarioPadrão)
         {
         }
         //base - Equivalente ao super
