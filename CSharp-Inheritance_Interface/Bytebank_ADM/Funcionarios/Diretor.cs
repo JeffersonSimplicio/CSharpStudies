@@ -8,8 +8,8 @@ namespace Bytebank_ADM.Funcionarios
 {
     public class Diretor : Funcionario
     {
-        static double salarioPadrão = 5000;
-        public Diretor(string nome, string cpf) : base(nome, cpf, salarioPadrão)
+        private static double _salarioPadrao = 5000;
+        public Diretor(string nome, string cpf) : base(nome, cpf, _salarioPadrao)
         {
         }
         //base - Equivalente ao super
@@ -19,7 +19,7 @@ namespace Bytebank_ADM.Funcionarios
             return this.Salario * 0.5 + base.Bonificacao();
         }
 
-        public override void aumentoSalario()
+        public override void AumentoSalario()
         {
             this.Salario *= 1.15;
         }

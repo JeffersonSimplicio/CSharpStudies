@@ -9,11 +9,12 @@ Console.WriteLine(
 );
 
 Diretor roberta = new Diretor("Roberta", "98765432101");
-Console.WriteLine(
-    string.Format(
-        "{0}: salário de R${1:N}; bonificação de R${2:N}", roberta.Nome, roberta.Salario, roberta.Bonificacao()
-    )
-);
+Log.Funcionario(roberta);
+//Console.WriteLine(
+//    string.Format(
+//        "{0}: salário de R${1:N}; bonificação de R${2:N}", roberta.Nome, roberta.Salario, roberta.Bonificacao()
+//    )
+//);
 
 Console.WriteLine("Total de funcionaios: " + Funcionario.quantidadeFuncionarios);
 

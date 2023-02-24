@@ -27,7 +27,7 @@ namespace Bytebank_ADM.Funcionarios
             return this.Salario * 0.1;
         }
 
-        public virtual void aumentoSalario()
+        public virtual void AumentoSalario()
         {
             this.Salario *= 1.1;
         }
