@@ -11,12 +11,11 @@ namespace Bytebank_ADM.Funcionarios
         public Diretor(string nome, string cpf, double salario) : base(nome, cpf, salario)
         {
         }
-        //Equivalente ao super
+        //base - Equivalente ao super
 
         public override double Bonificacao()
         {
-            //return String.Format("{0:N}", this.Salario * 0.5);
-            return this.Salario * 0.5;
+            return this.Salario * 0.5 + base.Bonificacao();
         }
     }
 }
