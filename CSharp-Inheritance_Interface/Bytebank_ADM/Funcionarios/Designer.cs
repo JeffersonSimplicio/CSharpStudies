@@ -9,7 +9,7 @@ namespace Bytebank_ADM.Funcionarios
     public class Designer : Funcionario
     {
         private static double _salarioPadrao = 3000;
-        public Designer(string nome, string cpf, double salario) : base(nome, cpf, _salarioPadrao)
+        public Designer(string nome, string cpf) : base(nome, cpf, _salarioPadrao)
         {
         }
         //base - Equivalente ao super

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Utilidades
 {
-    public class GerenciadorBonificacao
+    public class Bonificacao
     {
         public double TotalBonificacao { get; private set; }
 
