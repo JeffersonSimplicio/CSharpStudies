@@ -8,6 +8,13 @@ Console.WriteLine(
     )
 );
 
+pedro.aumentoSalario();
+Console.WriteLine(
+    string.Format(
+        "{0}: salário de R${1:N}; bonificação de R${2:N}", pedro.Nome, pedro.Salario, pedro.Bonificacao()
+    )
+);
+
 Diretor roberta = new Diretor("Roberta", "98765432101", 4321.09);
 Console.WriteLine(
     string.Format(
@@ -20,4 +27,4 @@ Console.WriteLine("Total de funcionaios: " + Funcionario.quantidadeFuncionarios)
 GerenciadorBonificacao bonificacao = new GerenciadorBonificacao();
 bonificacao.Registrar(roberta);
 bonificacao.Registrar(pedro);
-Console.WriteLine("Total de bonificação: R$" + bonificacao.TotalBonificacao);
+Console.WriteLine(string.Format("Total de bonificação: R${0:N}", bonificacao.TotalBonificacao));

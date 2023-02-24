@@ -17,5 +17,10 @@ namespace Bytebank_ADM.Funcionarios
         {
             return this.Salario * 0.5 + base.Bonificacao();
         }
+
+        public override void aumentoSalario()
+        {
+            this.Salario *= 1.15;
+        }
     }
 }

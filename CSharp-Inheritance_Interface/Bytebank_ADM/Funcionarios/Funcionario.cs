@@ -10,7 +10,7 @@ namespace Bytebank_ADM.Funcionarios
     {
         public string Nome { get; set; }
         public string CPF { get; private set; }
-        public double Salario { get; set; }
+        public double Salario { get; protected set; }
 
         public static int quantidadeFuncionarios { get; private set; }
 
@@ -25,6 +25,11 @@ namespace Bytebank_ADM.Funcionarios
         public virtual double Bonificacao()
         {
             return this.Salario * 0.1;
+        }
+
+        public virtual void aumentoSalario()
+        {
+            this.Salario *= 1.1;
         }
     }
 }
