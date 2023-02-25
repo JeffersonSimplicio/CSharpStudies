@@ -16,23 +16,32 @@ using Bytebank_ADM.Utilidades;
 //Console.WriteLine(string.Format("Total de bonificação: R${0:N}", bonificacao.TotalBonificacao));
 #endregion
 
-Diretor roberta = new Diretor("Roberta Sousa", "0001");
-Log.Funcionario(roberta);
+CalculoBonificação();
 
-Designer paulo = new Designer("Paulo Martiz", "0002");
-Log.Funcionario(paulo);
+void CalculoBonificação()
+{
+    Diretor roberta = new Diretor("Roberta Sousa", "0001");
+    Log.Funcionario(roberta);
 
-GerenteContas fernanda = new GerenteContas("Fernanda Vasconcelos", "0003");
-Log.Funcionario(fernanda);
+    Designer paulo = new Designer("Paulo Martiz", "0002");
+    Log.Funcionario(paulo);
 
-Auxiliar pedro = new Auxiliar("Pedro Martinels", "0004");
-Log.Funcionario(pedro);
+    GerenteContas fernanda = new GerenteContas("Fernanda Vasconcelos", "0003");
+    Log.Funcionario(fernanda);
 
-Console.WriteLine("Total de funcionaios: " + Funcionario.quantidadeFuncionarios);
+    Auxiliar pedro = new Auxiliar("Pedro Martinels", "0004");
+    Log.Funcionario(pedro);
 
-Bonificacao bonificacao = new Bonificacao();
-bonificacao.Registrar(roberta);
-bonificacao.Registrar(paulo);
-bonificacao.Registrar(fernanda);
-bonificacao.Registrar(pedro);
-Console.WriteLine(string.Format("Total de bonificação: R${0:N}", bonificacao.TotalBonificacao));
+    Console.WriteLine("Total de funcionaios: " + Funcionario.quantidadeFuncionarios);
+
+    Bonificacao bonificacao = new Bonificacao();
+    bonificacao.Registrar(roberta);
+    bonificacao.Registrar(paulo);
+    bonificacao.Registrar(fernanda);
+    bonificacao.Registrar(pedro);
+    Console.WriteLine(string.Format("Total de bonificação: R${0:N}", bonificacao.TotalBonificacao));
+}
+
+void UsarSistema()
+{
+}
