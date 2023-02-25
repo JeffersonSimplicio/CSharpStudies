@@ -1,4 +1,5 @@
 ﻿using Bytebank_ADM.Funcionarios;
+using Bytebank_ADM.Parceiro;
 using Bytebank_ADM.SistemaInterno;
 using Bytebank_ADM.Utilidades;
 
@@ -49,6 +50,9 @@ void UsarSistema()
 
     sistema.Login(roberta, "1234");
     sistema.Login(fernanda, "5678");
+
+    ParceiroComercial Caique = new ParceiroComercial("Caique Maia", "9876");
+    sistema.Login(Caique, "9876");
 }
 
 CalculoBonificação();
