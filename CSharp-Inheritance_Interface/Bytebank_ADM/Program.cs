@@ -20,13 +20,13 @@ CalculoBonificação();
 
 void CalculoBonificação()
 {
-    Diretor roberta = new Diretor("Roberta Sousa", "0001");
+    Diretor roberta = new Diretor("Roberta Sousa", "0001", "1234");
     Log.Funcionario(roberta);
 
     Designer paulo = new Designer("Paulo Martiz", "0002");
     Log.Funcionario(paulo);
 
-    GerenteContas fernanda = new GerenteContas("Fernanda Vasconcelos", "0003");
+    GerenteContas fernanda = new GerenteContas("Fernanda Vasconcelos", "0003", "4321");
     Log.Funcionario(fernanda);
 
     Auxiliar pedro = new Auxiliar("Pedro Martinels", "0004");
