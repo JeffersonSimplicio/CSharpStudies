@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.SistemaInterno
 {
-    public interface Autenticavel
+    public interface IAutenticavel
     {
         public string Senha { get; set; }
-        public abstract bool Autenticar(string senha);
+        public bool Autenticar(string senha);
     }
 }
