@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class Diretor : Funcionario, Autenticavel
     {
-        private static double _salarioPadrao = 5000;
-        public Diretor(string nome, string cpf, string senha) : base(nome, cpf, _salarioPadrao, senha)
+        static readonly double _salarioPadrao = 5000;
+
+        public string Senha { get; set; }
+
+        public Diretor(string nome, string cpf, string senha) : base(nome, cpf, _salarioPadrao)
         {
+            this.Senha = senha;
         }
         //base - Equivalente ao super
 
@@ -25,7 +29,7 @@ namespace Bytebank_ADM.Funcionarios
             this.Salario *= 1.15;
         }
 
-        public override bool Autenticar(string senha)
+        public bool Autenticar(string senha)
         {
             return senha == this.Senha;
         }
