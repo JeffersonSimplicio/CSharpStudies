@@ -19,17 +19,9 @@ namespace Bytebank.Contas
             this.Conta = numero_conta;
             this.Cliente = cliente;
 
-            /*
-            try
-            {
-                TaxaOperacao = 30 / TotalDeContasCriadas;
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("Ocorreu um erro! Não é possível fazer uma divisão por zero!");
-            }          
-            */
             TotalDeContasCriadas++;
+            TaxaOperacao = 30 / TotalDeContasCriadas;
+
         }
 
         public static int TotalDeContasCriadas { get; private set; }
