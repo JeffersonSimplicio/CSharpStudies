@@ -43,3 +43,13 @@ finally
 {
     lido.Dispose();
 }
+
+// using é o syntax sugar e faz o papel de try/finally
+/*
+using(LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt"))
+{
+    leitor.LerProximaLinha();
+    leitor.LerProximaLinha();
+    leitor.LerProximaLinha();
+}
+*/
