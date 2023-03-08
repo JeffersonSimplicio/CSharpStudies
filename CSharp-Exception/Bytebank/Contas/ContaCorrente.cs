@@ -1,4 +1,5 @@
 ﻿using Bytebank.Clientes;
+using Bytebank.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,14 +53,14 @@ namespace Bytebank.Contas
             this._saldo += valor;
         }
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
             if (valor <= this._saldo)
             {
                 this._saldo -= valor;
-                return true;
+                return;
             }
-            return false;
+            throw new SaldoInsuficienteException();
         }
 
         public bool Transferir(double valor, ContaCorrente destino)
