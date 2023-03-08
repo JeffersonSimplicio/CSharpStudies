@@ -1,7 +1,10 @@
 ﻿using Bytebank.Contas;
 using Bytebank.Clientes;
 using Bytebank.Exceptions;
+using ByteBank;
 
+#region
+/*
 try
 {
     Titular Iasmin = new Titular("Iasmin Ferreira", "12345678910");
@@ -23,4 +26,20 @@ catch (ArgumentException ex)
 catch(SaldoInsuficienteException ex)
 {
     Console.WriteLine(ex.Message);
-} 
+}
+*/
+#endregion
+
+LeitorDeArquivo lido = new LeitorDeArquivo("conta1.txt");
+try
+{
+    lido.LerProximaLinha();
+}
+catch (IOException)
+{
+    Console.WriteLine("Leitura do aquivo interrompida");
+}
+finally
+{
+    lido.Dispose();
+}
