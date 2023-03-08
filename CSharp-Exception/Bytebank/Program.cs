@@ -18,8 +18,9 @@ catch (ArgumentException ex)
     Console.WriteLine($"Parâmetro com erro: {ex.ParamName}"); //Usando interpolação de strings
     Console.WriteLine("Não é possível criar uma conta com o número de agência menor ou igual a zero!");
     Console.WriteLine(ex.Message);
+    Console.WriteLine(ex.StackTrace);
 }
 catch(SaldoInsuficienteException ex)
 {
     Console.WriteLine(ex.Message);
-}
+} 
