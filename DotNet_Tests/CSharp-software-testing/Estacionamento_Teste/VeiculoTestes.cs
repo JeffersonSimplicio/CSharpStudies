@@ -1,11 +1,15 @@
+using Estacionamento.Modelos;
+
 namespace Estacionamento_Teste
 {
-    public class UnitTest1
+    public class VeiculoTestes
     {
         [Fact]
-        public void Test1()
+        public void AcelerarTeste()
         {
-
+            Veiculo carro = new Veiculo();
+            carro.Acelerar(10);
+            Assert.Equal(100, carro.VelocidadeAtual);
         }
     }
 }
