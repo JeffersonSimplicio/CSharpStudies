@@ -11,5 +11,13 @@ namespace Estacionamento_Teste
             carro.Acelerar(10);
             Assert.Equal(100, carro.VelocidadeAtual);
         }
+
+        [Fact]
+        public void FreiaTeste()
+        {
+            Veiculo carro = new Veiculo();
+            carro.Frear(10);
+            Assert.Equal(-150, carro.VelocidadeAtual);
+        }
     }
 }
