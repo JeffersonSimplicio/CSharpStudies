@@ -67,7 +67,7 @@ namespace Estacionamento_Teste
         [Theory]
         [InlineData("Vitoria Magno", "xyz-9876", "Corolla", "prata")]
         public void BuscaVeiculoTeste(
-            string propietario,
+            string proprietario,
             string placa,
             string modelo,
             string cor
@@ -75,18 +75,18 @@ namespace Estacionamento_Teste
         {
             //Arrange
             Patio estacionamento = new Patio();
-
             Veiculo carro = new Veiculo();
-            carro.Proprietario = propietario;
+            carro.Proprietario = proprietario;
             carro.Placa = placa;
-            carro.Modelo = modelo;
             carro.Cor = cor;
+            carro.Modelo = modelo;
+            estacionamento.RegistrarEntradaVeiculo(carro);
 
             //Act
             Veiculo result = estacionamento.PesquisaVeiculo(placa);
 
             //Assert
-            Assert.Equal(carro, result);
+            Assert.Equal(placa, result.Placa);
         }
     }
 }
