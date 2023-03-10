@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using System.Reflection;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,6 +62,31 @@ namespace Estacionamento_Teste
 
             //Assert
             Assert.Equal(2, faturado);
+        }
+
+        [Theory]
+        [InlineData("Vitoria Magno", "xyz-9876", "Corolla", "prata")]
+        public void BuscaVeiculoTeste(
+            string propietario,
+            string placa,
+            string modelo,
+            string cor
+        )
+        {
+            //Arrange
+            Patio estacionamento = new Patio();
+
+            Veiculo carro = new Veiculo();
+            carro.Proprietario = propietario;
+            carro.Placa = placa;
+            carro.Modelo = modelo;
+            carro.Cor = cor;
+
+            //Act
+            Veiculo result = estacionamento.PesquisaVeiculo(placa);
+
+            //Assert
+            Assert.Equal(carro, result);
         }
     }
 }
