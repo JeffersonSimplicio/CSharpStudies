@@ -9,7 +9,7 @@ namespace Estacionamento_Teste
 {
     public class PatioTestes
     {
-        [Fact]
+        [Fact(DisplayName = "Testa o faturamento")]
         public void FaturamentoTeste()
         {
             //Arrange
