@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,7 +86,7 @@ namespace Estacionamento.Modelos
 
         public Veiculo PesquisaVeiculo(string placa)
         {
-            var encontrado = (from veiculo in this.Veiculos
+            Veiculo encontrado = (from veiculo in this.Veiculos
                               where veiculo.Placa == placa
                               select veiculo).SingleOrDefault();
             return encontrado;
@@ -98,7 +99,11 @@ namespace Estacionamento.Modelos
 
         public Veiculo EdidaVeiculo(Veiculo novo)
         {
-            throw new NotImplementedException();
+            Veiculo encontrado = (from veiculo in this.Veiculos
+                              where veiculo.Placa == novo.Placa
+                              select veiculo).SingleOrDefault();
+            encontrado.Editar(novo);
+            return encontrado;
         }
     }
 }

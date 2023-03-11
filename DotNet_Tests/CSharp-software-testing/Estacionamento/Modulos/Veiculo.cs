@@ -84,6 +84,13 @@ namespace Estacionamento.Modelos
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
 
+        internal void Editar(Veiculo novo)
+        {
+            this.Cor = novo.Cor;
+            this.Modelo = novo.Modelo;
+            this.Proprietario = novo.Proprietario;
+        }
+
         //Construtor
         public Veiculo()
         {
