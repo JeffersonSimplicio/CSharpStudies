@@ -88,5 +88,30 @@ namespace Estacionamento_Teste
             //Assert
             Assert.Equal(placa, result.Placa);
         }
+
+        [Fact]
+        public void EditaVeiculoTeste()
+        {
+            //Arrange
+            Patio estacionamento = new Patio();
+            Veiculo carro = new Veiculo();
+            carro.Proprietario = "Pedro Ferreira";
+            carro.Placa = "abc-4321";
+            carro.Modelo = "Polo";
+            carro.Cor = "Preto";
+            estacionamento.RegistrarEntradaVeiculo(carro);
+
+            Veiculo carroEditado = new Veiculo();
+            carroEditado.Proprietario = "Pedro Ferreira";
+            carroEditado.Placa = "abc-4321";
+            carroEditado.Modelo = "Golf";
+            carroEditado.Cor = "Preto";
+
+            //Act
+            Veiculo result = estacionamento.EdidaVeiculo(carroEditado);
+
+            //Assert
+            Assert.Equal(carroEditado.Modelo, result.Modelo);
+        }
     }
 }

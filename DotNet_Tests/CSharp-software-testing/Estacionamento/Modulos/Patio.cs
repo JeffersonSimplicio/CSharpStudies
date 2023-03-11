@@ -95,5 +95,10 @@ namespace Estacionamento.Modelos
             //}
             //throw new  not found
         }
+
+        public Veiculo EdidaVeiculo(Veiculo novo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
