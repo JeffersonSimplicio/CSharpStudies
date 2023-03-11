@@ -89,6 +89,11 @@ namespace Estacionamento.Modelos
                               where veiculo.Placa == placa
                               select veiculo).SingleOrDefault();
             return encontrado;
+            //if (encontrado != null)
+            //{
+            //    return encontrado;
+            //}
+            //throw new  not found
         }
     }
 }
