@@ -1,4 +1,5 @@
 using Estacionamento.Modelos;
+using Estacionamento.Modulos;
 
 namespace Estacionamento_Teste
 {
@@ -33,6 +34,7 @@ namespace Estacionamento_Teste
             //Arrange
             Veiculo carro = new Veiculo();
             carro.Proprietario = "Pedro Ferreira";
+            carro.Tipo = TipoVeiculo.Automovel;
             carro.Placa = "abc-4321";
             carro.Modelo = "Golf";
             carro.Cor = "Preto";
@@ -41,7 +43,7 @@ namespace Estacionamento_Teste
             string dados = carro.ToString();
 
             //Assert
-            Assert.Contains("Ficha do veiculo: automovel", dados);
+            Assert.Contains("Tipo do Veículo: Automovel", dados);
         }
     }
 }
