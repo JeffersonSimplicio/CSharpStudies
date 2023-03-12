@@ -26,5 +26,22 @@ namespace Estacionamento_Teste
         public void NomeProprietarioTeste()
         {
         }
+
+        [Fact]
+        public void DadosVeiculoTeste()
+        {
+            //Arrange
+            Veiculo carro = new Veiculo();
+            carro.Proprietario = "Pedro Ferreira";
+            carro.Placa = "abc-4321";
+            carro.Modelo = "Golf";
+            carro.Cor = "Preto";
+
+            //Act
+            string dados = carro.ToString();
+
+            //Assert
+            Assert.Contains("Ficha do veiculo: automovel", dados);
+        }
     }
 }
